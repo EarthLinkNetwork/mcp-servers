@@ -41,11 +41,11 @@ BEGIN
   (supabase_id, 'SUPABASE_SERVICE_ROLE_KEY', 'Your Supabase service role key', true, 'api_key', '***REMOVED***'),
   
   -- Slack
-  (slack_id, 'SLACK_BOT_TOKEN', 'Your Slack bot user OAuth token', true, 'api_key', 'xoxb-YOUR-BOT-TOKEN-HERE'),
-  (slack_id, 'SLACK_USER_TOKEN', 'Your Slack user OAuth token (optional)', false, 'api_key', 'xoxp-YOUR-USER-TOKEN-HERE'),
+  (slack_id, 'SLACK_BOT_TOKEN', 'Your Slack bot user OAuth token', true, 'api_key', 'your-slack-bot-token-here'),
+  (slack_id, 'SLACK_USER_TOKEN', 'Your Slack user OAuth token (optional)', false, 'api_key', 'your-slack-user-token-here'),
   
   -- GitHub
-  (github_id, 'GITHUB_PERSONAL_ACCESS_TOKEN', 'Your GitHub personal access token', true, 'api_key', 'ghp_YOUR-GITHUB-TOKEN-HERE'),
+  (github_id, 'GITHUB_PERSONAL_ACCESS_TOKEN', 'Your GitHub personal access token', true, 'api_key', 'your-github-token-here'),
   
   -- Google Drive
   (gdrive_id, 'GOOGLE_DRIVE_CLIENT_ID', 'OAuth 2.0 Client ID', true, 'string', NULL),
