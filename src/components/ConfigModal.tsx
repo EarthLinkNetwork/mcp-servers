@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { X, Download, Copy, Check } from 'lucide-react'
 import { GeneratedConfig } from '@/types/mcp'
 
@@ -13,6 +13,20 @@ interface ConfigModalProps {
 export function ConfigModal({ isOpen, onClose, config }: ConfigModalProps) {
   const [activeTab, setActiveTab] = useState<'claude' | 'cursor' | 'vscode' | 'env'>('claude')
   const [copiedTab, setCopiedTab] = useState<string | null>(null)
+
+  // Handle ESC key to close modal
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose()
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape)
+      return () => document.removeEventListener('keydown', handleEscape)
+    }
+  }, [isOpen, onClose])
 
   if (!isOpen) return null
 
@@ -80,9 +94,10 @@ export function ConfigModal({ isOpen, onClose, config }: ConfigModalProps) {
           <h2 className="text-xl font-semibold text-gray-900">Generated Configuration</h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-md transition-colors"
+            className="p-2 hover:bg-gray-100 rounded-md transition-colors border border-gray-300 hover:border-gray-400"
+            title="Close"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 text-gray-600" />
           </button>
         </div>
 
