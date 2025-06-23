@@ -3,10 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "PORT=4331 next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup": "node scripts/full-setup.js",
+    "setup:auto": "node scripts/auto-configure.js",
+    "db:setup": "node scripts/simple-setup.js",
+    "auth:setup": "node scripts/setup-auth.js",
+    "config:supabase": "node scripts/configure-supabase.js",
+    "fix:rls": "node scripts/fix-rls.js",
+    "fix:column": "node scripts/fix-column-direct.js",
+    "force:column": "node scripts/force-add-column.js",
+    "verify:schema": "node scripts/verify-schema.js"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",

@@ -38,10 +38,26 @@ cp .env.local.example .env.local
 
 ### Supabaseデータベースのセットアップ
 
+**自動セットアップ（推奨）:**
+```bash
+# 1. .env.localにサービスロールキーを追加
+# SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
+
+# 2. 自動セットアップを実行
+npm run setup
+```
+
+**手動セットアップ:**
 1. Supabaseプロジェクトを作成
 2. SQLエディターで以下のファイルを実行:
    - `supabase/schema.sql` - テーブルとRLSポリシーの作成
    - `supabase/seed.sql` - 初期データの投入
+
+**Supabaseキーの取得方法:**
+1. https://supabase.com/dashboard にアクセス
+2. プロジェクトを選択
+3. Settings > API に移動
+4. `service_role` キーをコピー
 
 ### 開発サーバーの起動
 
