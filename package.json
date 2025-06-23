@@ -1,0 +1,40 @@
+{
+  "name": "mcp-hub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "PORT=4331 next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "setup": "node scripts/full-setup.js",
+    "setup:auto": "node scripts/auto-configure.js",
+    "db:setup": "node scripts/simple-setup.js",
+    "auth:setup": "node scripts/setup-auth.js",
+    "config:supabase": "node scripts/configure-supabase.js",
+    "fix:rls": "node scripts/fix-rls.js",
+    "fix:column": "node scripts/fix-column-direct.js",
+    "force:column": "node scripts/force-add-column.js",
+    "verify:schema": "node scripts/verify-schema.js"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.50.0",
+    "lucide-react": "^0.522.0",
+    "next": "15.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

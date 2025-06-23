@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "WebFetch(domain:mcp.so)",
+      "Bash(npm init:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm install:*)",
+      "Bash(rm:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(mv:*)",
+      "Bash(true)",
+      "Bash(npx --yes create-next-app@latest mcp-hub --typescript --tailwind --app --src-dir --import-alias \"@/*\" --eslint --use-npm --turbopack)",
+      "Bash(cp:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm run dev:*)",
+      "Bash(brew install:*)",
+      "Bash(chmod:*)",
+      "Bash(npm run setup:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(npm run fix:rls:*)",
+      "Bash(npm run fix:column:*)",
+      "Bash(npm run force:column:*)",
+      "Bash(node:*)",
+      "WebFetch(domain:supabase.com)",
+      "mcp__ide__executeCode",
+      "Bash(python3:*)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": []
+  }
+}
