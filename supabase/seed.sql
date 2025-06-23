@@ -38,7 +38,7 @@ BEGIN
   
   -- Supabase
   (supabase_id, 'SUPABASE_URL', 'Your Supabase project URL', true, 'url', 'https://your-project.supabase.co'),
-  (supabase_id, 'SUPABASE_SERVICE_ROLE_KEY', 'Your Supabase service role key', true, 'api_key', '***REMOVED***'),
+  (supabase_id, 'SUPABASE_SERVICE_ROLE_KEY', 'Your Supabase service role key', true, 'api_key', 'your-supabase-service-role-key'),
   
   -- Slack
   (slack_id, 'SLACK_BOT_TOKEN', 'Your Slack bot user OAuth token', true, 'api_key', 'your-slack-bot-token-here'),
