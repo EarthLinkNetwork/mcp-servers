@@ -29,10 +29,8 @@
       "Bash(npm run build:*)",
       "Bash(git filter-branch:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)",
       "Bash(bfg:*)",
-      "Bash(git gc:*)",
-      "Bash(git push:*)"
+      "Bash(git gc:*)"
     ],
     "deny": []
   }
