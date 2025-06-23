@@ -152,7 +152,24 @@ export function AddServerModal({ isOpen, onClose, onSuccess }: AddServerModalPro
       onSuccess()
       onClose()
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Failed to add server')
+      console.error('Error adding server:', err)
+      
+      let errorMessage = 'Failed to add server'
+      
+      if (err instanceof Error) {
+        // Handle specific Supabase errors
+        if (err.message.includes('duplicate key')) {
+          errorMessage = 'A server with this name already exists. Please choose a different name.'
+        } else if (err.message.includes('403') || err.message.includes('permission')) {
+          errorMessage = 'Permission denied. Please check your authentication and try again.'
+        } else if (err.message.includes('404')) {
+          errorMessage = 'Database table not found. Please contact administrator.'
+        } else {
+          errorMessage = err.message
+        }
+      }
+      
+      setError(errorMessage)
     } finally {
       setLoading(false)
     }
